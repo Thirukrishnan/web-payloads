@@ -1,0 +1,4 @@
+the input directly gets reflected                          -- <script>alert('xss')</script>
+the input directly gets stored and <script> is filtered   --- <img src=x onerror=alert('XSS')>
+the input is part of url for <img> tag
+<img src="cloud$var.jpg">                                 --- ' onerror='alert("xss")'> (in this case a single quote breaks out of url)
