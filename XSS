@@ -6,3 +6,6 @@ the input is part of url for <img> tag
 the input is part of <a> tag                              --- javascript:alert()
 when the input is url and its content is used in JS       --- data:application/javascript,alert()  (use data url data:{type}/content)
 but filters http/https:
+
+:::html
+<script>alert(document.domain);</script>                 ---- when the input is in widget
