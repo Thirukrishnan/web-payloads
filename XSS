@@ -28,3 +28,4 @@ function handleResponse() {
     changeReq.send('csrf='+token+'&email=test@test.com')
 };
 </script>
+If single quotes and backslashes are escaped try -- injecting </script> to close the exisiting script tag or any other tag.
