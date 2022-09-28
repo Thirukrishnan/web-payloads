@@ -3,7 +3,7 @@ the input directly gets stored and <script> is filtered   --- <img src=x onerror
 the input is part of url for <img> tag
 <img src="cloud$var.jpg">                                 --- ' onerror='alert("xss")'> (in this case a single quote breaks out of url)
 
-the input is part of <a> tag                              --- javascript:alert()
+the input is part of <a href> attribute                              --- javascript:alert()
 when the input is url and its content is used in JS       --- data:application/javascript,alert()  (use data url data:{type}/content)
 but filters http/https:
 
